@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import validator from "react"; //for verifying email
+// import validator from "react"; //for verifying email
 
 const Main = () => {
   const [username, setusername] = useState("");
@@ -28,20 +28,11 @@ const Main = () => {
       seteusername("username must be 8 characters long");
       setucolor("red");
     }
-
-    // if (validator.isEmail(email)) {
-    //   console.log(email);
-    //   seteemail("");
-    //   setecolor("green");
-    // } else {
-    //   seteemail("email should have @ and .com");
-    //   setecolor("red");
-    // }
-    if (email.includes(".com") && email.includes("@")) {
+    if (email.includes(".") && email.includes("@")) {
       seteemail("");
       setecolor("green");
     } else {
-      seteemail("email must contain '.com' & '@'");
+      seteemail("Invalid Email. Please Enter Valid Email");
       setecolor("red");
     }
 
@@ -57,7 +48,7 @@ const Main = () => {
       setpcolor("red");
     }
 
-    if (password != "" && password === cpassword) {
+    if (password !== "" && password === cpassword) {
       setecpassword("");
       setcpcolor("green");
     } else {
@@ -111,6 +102,7 @@ const Main = () => {
               setpassword(e.target.value);
             }}
           />
+          <br />
           <input type="checkbox" onClick={togglePassword} />
           Show Password
           <p>{epassword}</p>
@@ -124,6 +116,7 @@ const Main = () => {
               setcpassword(e.target.value);
             }}
           />
+          <br />
           <input type="checkbox" onClick={confirmTogglePassword} />
           Show Password
           <p>{ecpassword}</p>
