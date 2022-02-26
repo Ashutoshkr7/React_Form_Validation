@@ -1,0 +1,37 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: linear-gradient(to right, #43e97b 0%, #38f9d7 100%);
+  height: 100vh;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.col-md-5 {
+  margin-top: 200px !important; /*Since we are overriding the bootstrap tab, we are using !important*/
+  background-color: white;
+  padding: 10px;
+}
+
+input {
+  margin-top: 10px !important;
+}
+button {
+  margin-top: 20px !important;
+}
+
+p {
+  color: red;
+  font-weight: bold;
+}
+
+input {
+  border-width: 3px !important;
+}
